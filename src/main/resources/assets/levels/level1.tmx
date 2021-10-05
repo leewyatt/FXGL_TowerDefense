@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.3" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="50" tileheight="50" infinite="0" nextlayerid="5" nextobjectid="50">
+ <tileset firstgid="1" name="bg_map" tilewidth="50" tileheight="50" tilecount="300" columns="20">
+  <image source="bg_map.png" width="1024" height="768"/>
+ </tileset>
+ <layer id="4" name="图块层 1" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJwNwwVwEAQAAMCNGowe22jYGAzGRomElEhIp3RLCIigdIeoNNLdqaJ0pwLSoTRIKo10N/zdf2BAQEA845vAhCYyyMQmMdikJjO5KUxpKlMbYhpDDTPctKYzvRnMaCYzm8WsRhhpNqPMbg6jzWkuY8xtrHHmMa/5zG8BP7CgH1rIwhaxqB9ZzOKWsKSl/NjSfmIZy1rO8n5qBStaycpWsarVrG4Na1rL2n5mHetaz/o2sKGNbGwTm9rM5rbwc1vayta28Qvb2s72fmkHv7Kjnfzab+xsF7vaze72sKe97G0f+9rP/g5woIP81sF+5/f+4BCHOszhjnCkoxztj45xrOMc7wQnOsnJTnGq05zuDGc6y9nOca7znO8CF7rIxf7kz/7iEn/1N5e6zOWucKWrXO0a17rO9W5wo5vc7Ba3us3f/cPt7nCnf7rL3e5xr/vc7wEPesjD/uXfHvGoxzzuCU96ytOe8R/Pes7zXvCil/zX/7zsFa96zeve8Ka3/N/b3vGu97zvAx/6yMc+8anPfO4LX/rK177xre8MCMR4xjeBCU1kkIlNYrBJTWZyU5jSVKY2xDSGGma4aU1nejOY0UxmNotZjTDSbEaZ3RxGm9NcxpjbWON8D2Eqg4w=
+  </data>
+ </layer>
+ <objectgroup id="3" name="对象层 1">
+  <object id="1" type="point" x="0" y="525">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="2" type="point" x="124" y="516">
+   <properties>
+    <property name="dir" value="up"/>
+    <property name="index" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="3" type="point" x="145.583" y="142.167">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="4" type="point" x="262.25" y="134.5">
+   <properties>
+    <property name="dir" value="down"/>
+    <property name="index" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="5" type="point" x="263.75" y="321.5">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="4"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="6" type="point" x="507.25" y="324.25">
+   <properties>
+    <property name="dir" value="up"/>
+    <property name="index" type="int" value="5"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="7" type="point" x="521.75" y="143.75">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="6"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="8" type="point" x="641.667" y="141.333">
+   <properties>
+    <property name="dir" value="down"/>
+    <property name="index" type="int" value="7"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="9" type="point" x="639.25" y="448.75">
+   <properties>
+    <property name="dir" value="left"/>
+    <property name="index" type="int" value="8"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="10" type="point" x="327.5" y="460.25">
+   <properties>
+    <property name="dir" value="down"/>
+    <property name="index" type="int" value="9"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="11" type="point" x="327.5" y="576.75">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="10"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="12" type="point" x="778.833" y="579.167">
+   <properties>
+    <property name="dir" value="up"/>
+    <property name="index" type="int" value="11"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="13" type="point" x="781.5" y="332.75">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="12"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="15" type="point" x="838" y="334">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="13"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="17" type="space" x="-1.25" y="431.75" width="124.75" height="75"/>
+  <object id="20" type="space" x="52.25" y="100" width="71" height="398.667"/>
+  <object id="22" type="space" x="141.5" y="51" width="626.833" height="62.5"/>
+  <object id="24" type="space" x="323" y="56.6667" width="59" height="256.333"/>
+  <object id="25" type="space" x="450.5" y="56.6667" width="60.5" height="258.333"/>
+  <object id="26" type="space" x="322.833" y="251" width="183.167" height="61.5"/>
+  <object id="27" type="space" x="194" y="198" width="61" height="449.5"/>
+  <object id="28" type="space" x="0" y="580.5" width="317.667" height="66.5"/>
+  <object id="29" type="space" x="575.5" y="196" width="62" height="244.5"/>
+  <object id="30" type="space" x="195.167" y="380" width="441" height="65"/>
+  <object id="32" type="space" x="197" y="381.833" width="119.5" height="265.167"/>
+  <object id="33" type="space" x="299" y="644.5" width="360.5" height="57.5"/>
+  <object id="36" type="space" x="708.5" y="52.5" width="60" height="517"/>
+  <object id="37" type="space" x="395" y="517" width="373.5" height="54"/>
+  <object id="38" type="space" x="708.667" y="247" width="292.333" height="52"/>
+  <object id="39" type="space" x="902.5" y="249" width="98.5" height="451.5"/>
+  <object id="41" type="space" x="842.5" y="392.5" width="108.5" height="309"/>
+  <object id="43" type="space" x="594.167" y="683.5" width="254.833" height="63.5"/>
+  <object id="44" type="space" x="780" y="653" width="64.5" height="81.8333"/>
+  <object id="46" type="space" x="403" y="646.667" width="255" height="101.333"/>
+ </objectgroup>
+</map>
