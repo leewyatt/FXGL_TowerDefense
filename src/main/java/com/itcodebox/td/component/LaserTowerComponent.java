@@ -37,9 +37,7 @@ public class LaserTowerComponent extends Component {
         shootTimer = FXGL.newLocalTimer();
         shootTimer.capture();
         texture.play();
-        FXGL.runOnce(() -> {
-            isBuilding = false;
-        }, Duration.seconds(.5));
+        FXGL.runOnce(() -> isBuilding = false, Duration.seconds(.5));
     }
 
     @Override
@@ -65,7 +63,6 @@ public class LaserTowerComponent extends Component {
         Point2D position = getEntity().getPosition();
         Point2D direction = enemy.getPosition().subtract(position);
 
-        //FXGL.play("fire_laser.wav");
         Entity bullet = FXGL.spawn("laserTowerBullet", new SpawnData(getEntity().getCenter().subtract(30/2.0, 10/2.0))
                 .put("radius",  Config.LASER_TOWER_DATA.getAttackRadius())
                 .put("damage",  Config.LASER_TOWER_DATA.getDamage()));
