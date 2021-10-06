@@ -9,3 +9,4 @@ gen
 
 # Project exclude paths
 /target/
+/logs/

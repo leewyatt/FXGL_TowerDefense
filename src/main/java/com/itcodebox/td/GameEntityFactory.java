@@ -11,6 +11,10 @@ import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.texture.Texture;
 import com.almasb.fxgl.ui.ProgressBar;
+import com.itcodebox.td.component.*;
+import com.itcodebox.td.constant.Config;
+import com.itcodebox.td.constant.GameType;
+import com.itcodebox.td.data.TowerData;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -23,13 +27,53 @@ import static com.almasb.fxgl.dsl.FXGL.entityBuilder;
  */
 public class GameEntityFactory implements EntityFactory {
 
-    @Spawns("tower")
+    /**
+     * 激光炮塔
+     */
+    @Spawns("laserTower")
     public Entity newTower(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(GameType.TOWER)
                 .bbox(BoundingShape.box(30, 30))
-                .with(new TowerComponent())
+                .with(new LaserTowerComponent())
                 .collidable()
+                .build();
+    }
+
+    /**
+     * 雷系炮塔
+     */
+    @Spawns("thunderTower")
+    public Entity newThunderTower(SpawnData data) {
+        return buildFiveElementsTower(data, Config.THUNDER_TOWER_DATA);
+    }
+
+    /**
+     * 火系炮塔
+     */
+    @Spawns("flameTower")
+    public Entity newFlameTower(SpawnData data) {
+        return buildFiveElementsTower(data, Config.FLAME_TOWER_DATA);
+    }
+
+    private Entity buildFiveElementsTower(SpawnData data, TowerData towerData) {
+        return FXGL.entityBuilder(data)
+                .type(GameType.TOWER)
+                .bbox(BoundingShape.box(towerData.getWidth(), towerData.getHeight()))
+                .with(new FiveElementsTowerComponent(towerData))
+                .collidable()
+                .build();
+    }
+
+    /**
+     * 箭塔
+     */
+    @Spawns("arrowTower")
+    public Entity newArrowTower(SpawnData data) {
+        return entityBuilder(data)
+                .type(GameType.TOWER)
+                .viewWithBBox(FXGL.texture("tower/arrow/tower.png"))
+                .with(new ArrowTowerComponent())
                 .build();
     }
 
@@ -57,19 +101,18 @@ public class GameEntityFactory implements EntityFactory {
     public Entity newEmpty(SpawnData data) {
         return FXGL.entityBuilder(data)
                 .type(GameType.EMPTY)
-                .bbox(BoundingShape.box(30, 30))
                 .collidable()
                 .build();
     }
 
     @Spawns("enemy")
     public Entity newEnemy(SpawnData data) {
-        int maxHp = 10;
+        int maxHp = 500;
         HealthIntComponent hp = new HealthIntComponent(maxHp);
-        ProgressBar hpBar = new ProgressBar(true);
+        ProgressBar hpBar = new ProgressBar(false);
         hpBar.setFill(Color.LIGHTGREEN);
         hpBar.setWidth(48);
-        hpBar.setHeight(8);
+        hpBar.setHeight(7);
         hpBar.setTranslateY(-5);
         hpBar.setMaxValue(maxHp);
         hpBar.setCurrentValue(maxHp);
@@ -95,15 +138,34 @@ public class GameEntityFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("laserTowerBullet")
+    public Entity spawnLaserBullet(SpawnData data) {
+        return createBullet(data, "tower/laser/bullet.png",30,10);
+    }
 
-    @Spawns("bullet")
-    public Entity spawnBullet(SpawnData data) {
+
+    @Spawns("flameTowerBullet")
+    public Entity newFlameBullet(SpawnData data) {
+        return createBullet(data, "tower/flame/bullet.png",30,10);
+    }
+
+    @Spawns("thunderTowerBullet")
+    public Entity newThunderBullet(SpawnData data) {
+        return createBullet(data, "tower/thunder/bullet.png",30,10);
+    }
+
+    @Spawns("arrowTowerBullet")
+    public Entity newArrowBullet(SpawnData data) {
+        return createBullet(data, "tower/arrow/bullet.png", 50, 10);
+    }
+
+    private Entity createBullet(SpawnData data, String s, int w, int h) {
         return entityBuilder(data)
                 .type(GameType.BULLET)
-                .viewWithBBox(FXGL.texture("tower/laser.png", 30, 10))
+                .viewWithBBox(FXGL.texture(s, w, h))
                 .with(new CollidableComponent(true))
                 .with(new OffscreenCleanComponent())
-                .with(new BulletComponent())
+                .with(new BulletComponent(data.get("radius"), data.get("damage")))
                 .build();
     }
 
@@ -115,24 +177,28 @@ public class GameEntityFactory implements EntityFactory {
                 .build();
     }
 
-    @Spawns("bottom")
-    public Entity newBottom(SpawnData data) {
+    @Spawns("placedButton")
+    public Entity newPlacedButton(SpawnData data) {
+        Texture texture = FXGL.texture(data.get("imgName"), data.get("width"), data.get("height"));
+        texture.setTranslateX((80 - texture.getWidth()) / 2.0);
+        texture.setTranslateY((80 - texture.getHeight()) / 2.0);
+
+        Texture bgTexture = FXGL.texture("btnBg.png", 105, 105);
+        bgTexture.setTranslateX((80 - bgTexture.getWidth()) / 2);
+        bgTexture.setTranslateY((80 - bgTexture.getHeight()) / 2);
         return entityBuilder(data)
-                .at(0, FXGL.getAppHeight()-100)
-                .view(new Rectangle(FXGL.getAppWidth(), 100, Color.web("#D3D3D399")))
+                .view(new Rectangle(80, 80, Color.web("#D5D5D511")))
+                .view(bgTexture)
+                .view(texture)
+                .with(new PlacedButtonComponent(data.get("towerType")))
                 .build();
     }
 
-    @Spawns("placedButton")
-    public Entity newPlacedButton(SpawnData data) {
-        Texture texture = FXGL.texture("tower/tower_icon.png", 58, 102);
-        texture.setTranslateX((80-58)/2.0);
-        texture.setTranslateY(-(80-62)/2.0);
-
+    @Spawns("placeBox")
+    public Entity newPlaceBox(SpawnData data) {
         return entityBuilder(data)
-                .at(50, FXGL.getAppHeight()-100)
-                .view(texture)
-                .with(new PlacedButtonComponent())
+                .at(1000, 0)
+                .view("chooseBg.png")
                 .build();
     }
 }
