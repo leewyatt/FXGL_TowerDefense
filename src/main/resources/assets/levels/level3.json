@@ -1,0 +1,8 @@
+{
+  "name": "Level 3",
+  "map": "tmx/level3.tmx",
+  "startingMoney": 920,
+  "enemy": "data/enemy3.json",
+  "interval": 2.0,
+  "amount": 25
+}

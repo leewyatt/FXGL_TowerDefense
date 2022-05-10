@@ -6,7 +6,3 @@
 *.iml
 out
 gen
-
-# Project exclude paths
-/target/
-/logs/

@@ -1,0 +1,298 @@
+14:04:24.975 [main                     ] DEBUG Logger               - Configured Logger
+14:04:24.982 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Tower Defense
+Version: 0.2
+Width: 1115
+Height: 750
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.leewyatt.td.TowerDefenseApp$1
+
+14:04:25.487 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+14:04:25.490 [JavaFX Application Thread] INFO  Engine               - FXGL-11.17 (16.07.2021 15.46) on WINDOWS (J:17.0.2 FX:16)
+14:04:25.491 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+14:04:25.491 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 10 version 10.0
+14:04:25.491 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+14:04:25.491 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+14:04:25.492 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+14:04:25.652 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Creating a JavaFX scene
+14:04:25.713 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target settings size: 1115.0 x 750.0
+14:04:25.714 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled scene size:    1115.0 x 750.0
+14:04:25.714 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:04:25.715 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Set initial scene to FXGLStartupScene
+14:04:25.725 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Opening main window
+14:04:25.898 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Window border size: (14.5999755859375, 38.0)
+14:04:25.898 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled size: 1115.0 x 750.0
+14:04:25.899 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:04:25.899 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scene size: 1115.0 x 750.0
+14:04:25.899 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Stage size: 1129.5999755859375 x 788.0
+14:04:25.911 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+14:04:25.985 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - User app class for loading assets: class com.leewyatt.td.TowerDefenseApp
+14:04:25.985 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+14:04:25.986 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/css/fxgl_dark.css
+14:04:26.044 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+14:04:26.049 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/scene/loading.png
+14:04:26.082 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/scene/loadingOut.png
+14:04:26.115 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+14:04:26.196 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=750, physics.ppm=50.0
+14:04:26.197 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Using strategy: BRUTE_FORCE
+14:04:26.201 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1115x750
+14:04:26.203 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/rectMenu/mainMenuBg.png
+14:04:26.440 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+14:04:26.458 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+14:04:26.468 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/particles/smoke.png
+14:04:26.592 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/textures/particles/trace_horizontal.png
+14:04:26.615 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+14:04:26.625 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+14:04:26.631 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: D:\Projects\IdeaProjects\fxgl\FXGL_TowerDefense\system\fxgl.bundle
+14:04:26.640 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+14:04:26.640 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+14:04:26.645 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+14:04:26.646 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+14:04:26.646 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/VarelaRound-Regular.ttf
+14:04:26.646 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/languages/english.lang
+14:04:26.670 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 0.760 sec
+14:04:26.672 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/music/bgm.mp3
+14:04:26.977 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Abel-Regular.ttf
+14:04:26.981 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/lucida_console.ttf
+14:04:26.990 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/Administrator/.m2/repository/com/github/almasb/fxgl/11.17/fxgl-11.17.jar!/fxglassets/ui/fonts/Courier-Prime.ttf
+14:04:27.041 [FXGL Background Thread 2 ] WARN  UpdaterService       - Failed to find updates: java.net.UnknownHostException: raw.githubusercontent.com
+14:04:27.042 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music com.almasb.fxgl.audio.Music@683a94a0
+14:04:27.043 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/logo.jpg
+14:04:27.067 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/cursor.png
+14:04:27.077 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - CTRL+8
+14:04:27.077 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+14:04:27.078 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+14:04:27.078 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+C
+14:04:27.080 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+14:04:27.080 [JavaFX Application Thread] DEBUG LoopRunner           - Initializing JavaFX AnimationTimerLoop
+14:04:27.083 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:27.100 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLStartupScene and adding to FXGLMainMenuDummyScene
+14:04:27.100 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLStartupScene -> FXGLMainMenuDummyScene
+14:04:27.100 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: MainMenu
+14:04:27.101 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/sounds/launch_sound.wav
+14:04:27.117 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:27.124 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to MainMenu
+14:04:27.125 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> MainMenu
+14:04:27.127 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+14:04:28.410 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/sounds/mainMenuHover.wav
+14:04:29.644 [FXGL Background Thread 3 ] DEBUG Engine               - Logging environment variables
+14:04:29.644 [FXGL Background Thread 3 ] DEBUG Engine               - achievements: []
+14:04:29.644 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeight: 750.0
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeightProperty: ReadOnlyDoubleProperty [value: 750.0]
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidth: 1115.0
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidthProperty: ReadOnlyDoubleProperty [value: 1115.0]
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - appIcon: logo.jpg
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - applicationMode: DEVELOPER
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - collisionDetectionStrategy: BRUTE_FORCE
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - configClass: Optional.empty
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - credits: []
+14:04:29.645 [FXGL Background Thread 3 ] DEBUG Engine               - defaultCursor: CursorInfo(imageName=cursor.png, hotspotX=0.0, hotspotY=0.0)
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - devEnableDebugCameraProperty: BooleanProperty [value: false]
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - enabledMenuItems: []
+14:04:29.646 [FXGL Background Thread 3 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.services.FXGLAssetLoaderService, class com.almasb.fxgl.app.FXGLApplication$GameApplicationService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - fontMono: lucida_console.ttf
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficulty: MEDIUM
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolume: 0.5
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.07]
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolume: 0.5
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.4]
+14:04:29.647 [FXGL Background Thread 3 ] DEBUG Engine               - height: 750
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - is3D: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isAndroid: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isBrowser: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isClickFeedbackEnabled: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isCloseConfirmation: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isDesktop: true
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isEntityPreloadEnabled: true
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+14:04:29.648 [FXGL Background Thread 3 ] DEBUG Engine               - isFileSystemWriteAllowed: true
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenAllowed: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenFromStart: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isGameMenuEnabled: true
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isIOS: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isIntroEnabled: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isLinux: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isMac: false
+14:04:29.649 [FXGL Background Thread 3 ] DEBUG Engine               - isMainMenuEnabled: true
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isManualResizeEnabled: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isMobile: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isNative: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isPauseMusicWhenMinimized: true
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isPreserveResizeRatio: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isProfilingEnabled: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isScaleAffectedOnResize: true
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isSingleStep: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isUserProfileEnabled: false
+14:04:29.650 [FXGL Background Thread 3 ] DEBUG Engine               - isWindows: true
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - menuKey: ESCAPE
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - mouseSensitivity: 0.2
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - pixelsPerMeter: 50.0
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - platform: WINDOWS
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - prefHeightProperty: ReadOnlyDoubleProperty [value: 750.0]
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - prefWidthProperty: ReadOnlyDoubleProperty [value: 1115.0]
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - profileDir: profiles/
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+14:04:29.651 [FXGL Background Thread 3 ] DEBUG Engine               - randomSeed: -1
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=11.17, build=16.07.2021 15.46)
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - saveFileExt: sav
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - scaledHeightProp$fxgl: DoubleProperty [bound, value: 750.0]
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - scaledWidthProp$fxgl: DoubleProperty [bound, value: 1115.0]
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - sceneFactory: com.leewyatt.td.TowerDefenseApp$1@12602099
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - secondsIn24h: 60
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+14:04:29.652 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - soundNotification: core/notification.wav
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - ticksPerSecond: -1
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - title: Tower Defense
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/release/README.md
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - userAppClass: class com.leewyatt.td.TowerDefenseApp
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - version: 0.2
+14:04:29.653 [FXGL Background Thread 3 ] DEBUG Engine               - versionCheckDays: 7
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - width: 1115
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - Logging services
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLAssetLoaderService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.FXGLApplication$GameApplicationService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+14:04:29.654 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+14:04:29.655 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+14:04:29.656 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+14:04:29.841 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/sounds/select.wav
+14:04:29.843 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+14:04:29.844 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: MainMenu
+14:04:29.844 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:29.845 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from MainMenu and adding to FXGLMainMenuDummyScene
+14:04:29.845 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene <- MainMenu
+14:04:29.845 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:29.853 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to GameLoadingScene
+14:04:29.853 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLMainMenuDummyScene -> GameLoadingScene
+14:04:29.853 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+14:04:29.853 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+14:04:29.853 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+14:04:29.853 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+14:04:29.854 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+14:04:29.871 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/right/chooseBg.png
+14:04:29.876 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/laserTower.json
+14:04:30.044 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/laser/icon.png
+14:04:30.045 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/right/btnBg.png
+14:04:30.055 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/right/selected_border.png
+14:04:30.063 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/ui/css/game.css
+14:04:30.065 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/flameTower.json
+14:04:30.071 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/flame/icon.png
+14:04:30.074 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/iceTower.json
+14:04:30.079 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/ice/icon.png
+14:04:30.083 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/poisonTower.json
+14:04:30.087 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/poison/icon.png
+14:04:30.090 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/thunderTower.json
+14:04:30.094 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/thunder/icon.png
+14:04:30.096 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/arrowTower.json
+14:04:30.101 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/arrow/icon.png
+14:04:30.106 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/levels/level1.json
+14:04:30.155 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/levels/tmx/level1.tmx
+14:04:30.156 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:04:30.156 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Loading view for layer 块层 1
+14:04:30.158 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Created buffer with size 1000.0x750.0
+14:04:30.200 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating object layer entities
+14:04:30.210 [FXGL Background Thread 2 ] DEBUG GameWorld            - Clearing removable entities
+14:04:30.210 [FXGL Background Thread 2 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@2bd7f898
+14:04:30.217 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading JSON from: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/data/enemy1.json
+14:04:30.232 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/startPoint.png
+14:04:30.250 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/finishPoint.png
+14:04:30.258 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/top/lv.png
+14:04:30.260 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/top/gold.png
+14:04:30.261 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/top/kill.png
+14:04:30.262 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/top/hp.png
+14:04:30.267 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/info/cost.png
+14:04:30.268 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/info/range.png
+14:04:30.270 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/info/damage.png
+14:04:30.271 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/ui/info/speed.png
+14:04:30.273 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0.419 sec
+14:04:30.279 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:30.293 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameLoadingScene and adding to GameScene
+14:04:30.294 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameLoadingScene -> GameScene
+14:04:30.769 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: LevelStartScene
+14:04:30.770 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/preview.png
+14:04:30.772 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:30.773 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to LevelStartScene
+14:04:30.773 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> LevelStartScene
+14:04:31.961 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Pop state: LevelStartScene
+14:04:31.961 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:04:31.962 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from LevelStartScene and adding to GameScene
+14:04:31.967 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene <- LevelStartScene
+14:04:32.511 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/thunder/icon.png
+14:04:32.513 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/thunder/effect.png
+14:04:32.550 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/poison/icon.png
+14:04:32.551 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/poison/effect.png
+14:04:32.593 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/ice/icon.png
+14:04:32.595 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/ice/effect.png
+14:04:32.611 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/flame/icon.png
+14:04:32.613 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/flame/effect.png
+14:04:32.789 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/laser/icon.png
+14:04:32.791 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/laser/effect.png
+14:04:34.250 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/sounds/placed.wav
+14:04:34.254 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/laser/tower.png
+14:04:35.707 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/up.png
+14:04:35.710 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/down.png
+14:04:35.713 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/right.png
+14:04:35.715 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/left.png
+14:04:35.718 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/enemy/e1/die.png
+14:04:35.720 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/buffer/slow.png
+14:04:36.022 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/thunder/tower.png
+14:04:36.220 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/arrow/icon.png
+14:04:36.221 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/arrow/effect.png
+14:04:38.090 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/arrow/tower.png
+14:04:39.950 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/poison/tower.png
+14:04:42.049 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/poison/bullet.png
+14:04:42.418 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/buffer/poison.png
+14:04:43.409 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/laser/bullet.png
+14:04:45.600 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/thunder/bullet.png
+14:04:46.144 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/buffer/vertigo.png
+14:04:47.122 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/arrow/bullet.png
+14:04:47.537 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/buffer/critical2.png
+14:05:27.320 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/ice/tower.png
+14:05:27.616 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/ice/bullet.png
+14:05:32.110 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/flame/tower.png
+14:05:32.480 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/tower/flame/bullet.png
+14:05:32.609 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/D:/Projects/IdeaProjects/fxgl/FXGL_TowerDefense/target/classes/assets/textures/buffer/burn.png
+14:05:41.770 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+14:05:41.770 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+14:05:41.770 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+14:05:41.773 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: D:\Projects\IdeaProjects\fxgl\FXGL_TowerDefense\system\fxgl.bundle
+14:05:41.775 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+14:05:41.775 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Closing main window
+14:05:41.787 [JavaFX Application Thread] DEBUG Logger               - Closing Logger

@@ -1,0 +1,26 @@
+.tower-btn {
+    -fx-background-color: #0000;
+}
+
+.tower-btn:disabled {
+    -fx-opacity: 1.0;
+    -fx-background-color: #0008;
+}
+
+.pause-btn {
+    -fx-background-image: url("/assets/textures/ui/hexMenu/pause.png");
+    -fx-background-color: #0000;
+    -fx-border-width: 0px;
+}
+
+.pause-btn:hover {
+    -fx-background-image: url("/assets/textures/ui/hexMenu/pauseHover.png");
+}
+
+.pause-btn:selected {
+    -fx-background-image: url("/assets/textures/ui/hexMenu/play.png");
+}
+
+.pause-btn:selected:hover {
+    -fx-background-image: url("/assets/textures/ui/hexMenu/playHover.png");
+}

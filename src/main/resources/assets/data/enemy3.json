@@ -1,0 +1,76 @@
+{
+  "hp": 4000,
+  "reward": 45,
+  "moveSpeed": 60,
+  "width": 60,
+  "height": 51,
+  "preview": "enemy/e3/preview.png",
+  "bboxData": {
+    "x": 0,
+    "y": 0,
+    "w": 60,
+    "h": 51
+  },
+  "animationData": [
+    {
+      "status": "up",
+      "imageName": "enemy/e3/dir.png",
+      "width": 240,
+      "height": 204,
+      "framesPerRow": 4,
+      "frameWidth": 60,
+      "frameHeight": 51,
+      "channelDuration": 0.2,
+      "startFrame": 12,
+      "endFrame": 15
+    },
+    {
+      "status": "down",
+      "imageName": "enemy/e3/dir.png",
+      "width": 240,
+      "height": 204,
+      "framesPerRow": 4,
+      "frameWidth": 60,
+      "frameHeight": 51,
+      "channelDuration": 0.2,
+      "startFrame": 0,
+      "endFrame": 3
+    },
+    {
+      "status": "right",
+      "imageName": "enemy/e3/dir.png",
+      "width": 240,
+      "height": 204,
+      "framesPerRow": 4,
+      "frameWidth": 60,
+      "frameHeight": 51,
+      "channelDuration": 0.2,
+      "startFrame": 8,
+      "endFrame": 11
+    },
+    {
+      "status": "left",
+      "imageName": "enemy/e3/dir.png",
+      "width": 240,
+      "height": 204,
+      "framesPerRow": 4,
+      "frameWidth": 60,
+      "frameHeight": 51,
+      "channelDuration": 0.2,
+      "startFrame": 4,
+      "endFrame": 7
+    },
+    {
+      "status": "die",
+      "imageName": "enemy/die.png",
+      "width": 300,
+      "height": 67,
+      "framesPerRow": 5,
+      "frameWidth": 60,
+      "frameHeight": 67,
+      "channelDuration": 0.26,
+      "startFrame": 0,
+      "endFrame": 4
+    }
+  ]
+}

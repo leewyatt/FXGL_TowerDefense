@@ -1,0 +1,34 @@
+{
+  "name": "Arrow Tower",
+  "icon": "tower/arrow/icon.png",
+  "width": 43,
+  "height": 68,
+  "cost": 320,
+  "attackRate": 0.5,
+  "animationData": {
+    "status": "run",
+    "imageName": "tower/arrow/tower.png",
+    "width": 43,
+    "height": 68,
+    "framesPerRow": 1,
+    "frameWidth": 43,
+    "frameHeight": 68,
+    "channelDuration": 1,
+    "startFrame": 0,
+    "endFrame": 0
+  },
+  "bulletData": {
+    "imageName": "tower/arrow/bullet.png",
+    "width": 50,
+    "height": 10,
+    "attackDamage": 38,
+    "range": 350,
+    "speed": 600,
+    "effectData": {
+      "name": "群攻",
+      "imgName": "tower/arrow/effect.png",
+      "desc": "群攻: 同时攻击多个敌人",
+      "descEn": "Group Attack."
+    }
+  }
+}

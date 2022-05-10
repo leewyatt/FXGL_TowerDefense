@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.3" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="50" tileheight="50" infinite="0" nextlayerid="4" nextobjectid="80">
+ <tileset firstgid="1" name="map4" tilewidth="50" tileheight="50" tilecount="300" columns="20">
+  <image source="map4.png" width="1024" height="768"/>
+ </tileset>
+ <layer id="1" name="块层 1" width="20" height="15">
+  <data encoding="csv">
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
+21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,
+41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,
+61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,
+81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,
+101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,
+121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,
+141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,
+161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,
+181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,
+201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,
+221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,
+241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,
+261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,
+281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300
+</data>
+ </layer>
+ <objectgroup id="3" name="对象层 1">
+  <object id="57" type="space" x="588" y="387.333" width="218.667" height="110.667"/>
+  <object id="58" type="space" x="586.667" y="192.667" width="120" height="254.667"/>
+  <object id="62" type="space" x="584" y="87.3333" width="70" height="171.333"/>
+  <object id="63" type="space" x="142" y="52.6667" width="419.333" height="64"/>
+  <object id="64" type="space" x="4" y="150" width="124" height="600.667"/>
+  <object id="65" type="space" x="189.333" y="191.333" width="67.3333" height="439.333"/>
+  <object id="66" type="space" x="320.333" y="58.6667" width="70" height="456"/>
+  <object id="67" type="space" x="446" y="188" width="69.3333" height="444.667"/>
+  <object id="69" type="space" x="188.667" y="576" width="753.333" height="74.6667"/>
+  <object id="70" type="space" x="62.6667" y="104.667" width="66.6667" height="89.3333"/>
+  <object id="71" type="point" x="130" y="746">
+   <properties>
+    <property name="dir" value="up"/>
+    <property name="index" type="int" value="0"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="72" type="point" x="136.667" y="146">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="73" type="point" x="262.667" y="136.667">
+   <properties>
+    <property name="dir" value="down"/>
+    <property name="index" type="int" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="74" type="point" x="262" y="526">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="75" type="point" x="390.667" y="520.667">
+   <properties>
+    <property name="dir" value="up"/>
+    <property name="index" type="int" value="4"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="76" type="point" x="397.333" y="129.333">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="5"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="77" type="point" x="522.667" y="128.667">
+   <properties>
+    <property name="dir" value="down"/>
+    <property name="index" type="int" value="6"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="78" type="point" x="524" y="514.667">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="7"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="79" type="point" x="924" y="516">
+   <properties>
+    <property name="dir" value="right"/>
+    <property name="index" type="int" value="8"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>

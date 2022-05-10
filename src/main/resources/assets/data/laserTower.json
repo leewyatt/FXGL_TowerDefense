@@ -1,0 +1,34 @@
+{
+  "name": "Laser Tower",
+  "icon": "tower/laser/icon.png",
+  "width": 36,
+  "height": 38,
+  "attackRate": 0.18,
+  "cost": 50,
+  "animationData": {
+    "status": "run",
+    "imageName": "tower/laser/tower.png",
+    "width": 144,
+    "height": 76,
+    "framesPerRow": 4,
+    "frameWidth": 36,
+    "frameHeight": 38,
+    "channelDuration": 0.5,
+    "startFrame": 0,
+    "endFrame": 7
+  },
+  "bulletData": {
+    "imageName": "tower/laser/bullet.png",
+    "width": 38,
+    "height": 13,
+    "attackDamage": 35,
+    "range": 150,
+    "speed": 680,
+    "effectData": {
+      "name": "Critical Hit",
+      "imgName": "tower/laser/effect.png",
+      "desc": "暴击: 28%的几率发动5倍攻击.",
+      "descEn": "Critical: 28% 5x attack."
+    }
+  }
+}
