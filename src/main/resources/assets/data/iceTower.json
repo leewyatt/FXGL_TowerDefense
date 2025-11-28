@@ -21,7 +21,7 @@
     "imageName": "tower/ice/bullet.png",
     "width": 32,
     "height": 12,
-    "attackDamage": 10,
+    "attackDamage": 15,
     "range": 260,
     "speed": 520,
     "effectData": {

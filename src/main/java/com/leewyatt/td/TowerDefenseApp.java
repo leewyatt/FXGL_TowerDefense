@@ -15,12 +15,19 @@ import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.HitBox;
 import com.leewyatt.td.components.BuildIndicatorComponent;
+import com.leewyatt.td.components.BulletComponent;
 import com.leewyatt.td.components.EnemyComponent;
 import com.leewyatt.td.data.ConfigData;
 import com.leewyatt.td.data.EnemyData;
 import com.leewyatt.td.data.LevelData;
 import com.leewyatt.td.data.TowerData;
-import com.leewyatt.td.ui.*;
+import com.leewyatt.td.ui.GameLoadingScene;
+import com.leewyatt.td.ui.LevelEndScene;
+import com.leewyatt.td.ui.LevelStartScene;
+import com.leewyatt.td.ui.MainMenu;
+import com.leewyatt.td.ui.RangeIndicator;
+import com.leewyatt.td.ui.TopInfoPane;
+import com.leewyatt.td.ui.TowerDetailPane;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Toggle;
@@ -32,15 +39,18 @@ import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import javafx.util.Pair;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 图片,音乐等来自网络,本项目仅仅用于javafx和FXGL技术的学习.请勿用于商业用途;如果侵权,请联系我进行删除
- *
+ * <p>
  * Pictures, music, etc. download from the Internet.
  * This project is only used for learning JavaFX and fxgl technology.
  * If it infringes, please contact me to delete it
- *
  */
 
 
@@ -65,7 +75,7 @@ public class TowerDefenseApp extends GameApplication {
      * LinkedHashMap<Integer, Pair<Point2D, String>> p
      * Integer 存储点的索引, 第几个点
      * Pari<Point2D,String> point2D表示点的位置
-     *                      String 表示方向,比如此刻是up,就表示敌人应该向上转;显示向上移动的图片
+     * String 表示方向,比如此刻是up,就表示敌人应该向上转;显示向上移动的图片
      */
     private final LinkedHashMap<Integer, Pair<Point2D, String>> pointInfos = new LinkedHashMap<>();
     /**
@@ -118,15 +128,15 @@ public class TowerDefenseApp extends GameApplication {
     protected void initInput() {
         FXGL.getInput().addEventHandler(MouseEvent.MOUSE_MOVED, e -> {
             String towerName = FXGL.gets("selectedTowerName");
-            //如果没有选择炮塔.那么返回
+            // 如果没有选择炮塔.那么返回
             if (towerName.isEmpty()) {
                 return;
             }
-            //如果选择了炮塔,那么移动的时候,动态显示位置
+            // 如果选择了炮塔,那么移动的时候,动态显示位置
             mouseMove(towerName);
         });
         FXGL.getInput().addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
-            //右键取消选择
+            // 右键取消选择
             if (e.getButton() == MouseButton.SECONDARY) {
                 FXGL.set("selectedTowerName", "");
                 Toggle selectedToggle = towerBtnGroup.getSelectedToggle();
@@ -140,7 +150,7 @@ public class TowerDefenseApp extends GameApplication {
             if (towerName.isEmpty() || !canBuilder) {
                 return;
             }
-            //如果选择了炮塔, 那么建造炮塔
+            // 如果选择了炮塔, 那么建造炮塔
             buildTower(towerName);
         });
 
@@ -159,14 +169,14 @@ public class TowerDefenseApp extends GameApplication {
         int w = towerData.width();
         int h = towerData.height();
         Point2D p = FXGL.getInput().getMousePositionWorld();
-        //鼠标点击的位置是炮塔的中心
+        // 鼠标点击的位置是炮塔的中心
         double x = p.getX() - w / 2.0;
         double y = p.getY() - h / 2.0;
         buildIndicator.setX(x);
         buildIndicator.setY(y);
         boolean flag = false;
         for (Rectangle r : spaceInfos) {
-            //判断是否可以建造;(如果spaceInfos里存入的是Rectangle2D,
+            // 判断是否可以建造;(如果spaceInfos里存入的是Rectangle2D,
             // 并且每次updateIndicator 每次修改图片时就改了宽高,那么可以用  buildIndicator.isWithin(r2d)来判断
             if (r.getX() <= x && r.getWidth() + r.getX() >= x + w && r.getY() <= y && r.getHeight() + r.getY() >= y + h) {
                 flag = true;
@@ -184,7 +194,7 @@ public class TowerDefenseApp extends GameApplication {
         emptyEntity.getBoundingBoxComponent().addHitBox(new HitBox(BoundingShape.box(towerData.width(), towerData.height())));
         boolean temp = true;
         for (Entity tower : towers) {
-            //判断可以建造的地方是否有其他炮塔
+            // 判断可以建造的地方是否有其他炮塔
             if (emptyEntity.isColliding(tower)) {
                 temp = false;
                 break;
@@ -221,16 +231,35 @@ public class TowerDefenseApp extends GameApplication {
         FXGL.getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.BULLET, EntityType.ENEMY) {
             @Override
             protected void onCollisionBegin(Entity bullet, Entity enemy) {
+                // 检查实体是否有效
+                if (!bullet.isActive() || !enemy.isActive()) {
+                    return;
+                }
+
                 EnemyComponent enemyComponent = enemy.getComponent(EnemyComponent.class);
                 if (enemyComponent.isDead()) {
                     return;
                 }
-                enemyComponent.attacked(bullet.getObject("bulletData"));
-                bullet.removeFromWorld();
+
+                BulletComponent bulletComponent = bullet.getComponent(BulletComponent.class);
+
+                // 检查此批次的箭是否可以对这个敌人造成伤害
+                if (bulletComponent.canDealDamage(enemy)) {
+                    // 可以造成伤害
+                    bulletComponent.markHit(enemy);  // 标记此批次已命中此敌人
+                    enemyComponent.attacked(bullet.getObject("bulletData"));
+                    bullet.removeFromWorld();
+                } else {
+                    // 同批次的箭已经命中过此敌人，不造成伤害，继续飞行
+                    // 什么都不做，让箭继续前进
+                }
             }
         });
 
         FXGL.onCollision(EntityType.FINISH_POINT, EntityType.ENEMY, (point, enemy) -> {
+            if (!enemy.isActive()) {
+                return;
+            }
             FXGL.inc("health", -1);
             if (levelData != null && FXGL.geti("health") <= 0) {
                 levelData = null;
@@ -261,11 +290,11 @@ public class TowerDefenseApp extends GameApplication {
 
         FXGL.getGameScene().setBackgroundColor(Color.web("#16232B"));
         FXGL.getGameWorld().addEntityFactory(new TowerDefenseFactory());
-        //tower box 存放炮塔按钮
+        // tower box 存放炮塔按钮
         createTowersBox();
-        //加载关卡
+        // 加载关卡
         loadLevel();
-        //判断关卡是否完成;如果完成,显示完成界面
+        // 判断关卡是否完成;如果完成,显示完成界面
         checkTheLevelIsEnd();
     }
 
@@ -319,40 +348,42 @@ public class TowerDefenseApp extends GameApplication {
     }
 
     private void loadLevel() {
+        BulletComponent.clearHitRecords();
+
         Toggle selectedToggle = towerBtnGroup.getSelectedToggle();
         if (selectedToggle != null) {
             selectedToggle.setSelected(false);
         }
-        //清理集合
+        // 清理集合
         spaceInfos.clear();
         pointInfos.clear();
-        //初始化数据与设置
+        // 初始化数据与设置
         FXGL.set("kill", 0);
         FXGL.set("health", ConfigData.INIT_HP);
         FXGL.set("selectedTowerName", "");
 
-        //读取关卡数据
+        // 读取关卡数据
         levelData = FXGL.getAssetLoader().loadJSON("levels/level" + FXGL.geti("level") + ".json", LevelData.class).get();
         FXGL.set("levelData", levelData);
-        //设置当前关卡
+        // 设置当前关卡
         String map = levelData.map();
         FXGL.setLevelFromMap(map);
 
-        //设置初始金币
+        // 设置初始金币
         FXGL.set("gold", levelData.startingMoney());
-        //生成ui相关的实体
+        // 生成ui相关的实体
         spawnEntities();
-        //读取敌军数据
+        // 读取敌军数据
         EnemyData enemyData = FXGL.getAssetLoader().loadJSON(levelData.enemy(), EnemyData.class).get();
         FXGL.set("enemyPreview", enemyData.getPreview());
         FXGL.set("enemyHp", enemyData.getHp());
-        //4. 弹出信息框
+        // 4. 弹出信息框
         FXGL.runOnce(() -> {
             FXGL.getSceneService().pushSubScene(levelStartSceneValue.get());
         }, Duration.seconds(0.5));
-        //生成敌军实体
+        // 生成敌军实体
         spawnEnemy(enemyData);
-        //终点传送门
+        // 终点传送门
         FXGL.spawn("finishPoint", new SpawnData(pointInfos.get(pointInfos.size() - 1).getKey()));
     }
 
@@ -368,12 +399,12 @@ public class TowerDefenseApp extends GameApplication {
     }
 
     private void spawnEntities() {
-        //建造指示器的创建
+        // 建造指示器的创建
         buildIndicator = FXGL.spawn("buildIndicator");
         hideIndicator();
         buildIndicatorComponent = buildIndicator.getComponent(BuildIndicatorComponent.class);
 
-        //用于检测的碰撞的不可见实体
+        // 用于检测的碰撞的不可见实体
         emptyEntity = FXGL.spawn("empty");
         emptyEntity.setX(-100);
         emptyEntity.setY(-100);

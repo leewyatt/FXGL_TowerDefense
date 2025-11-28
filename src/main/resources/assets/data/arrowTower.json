@@ -23,7 +23,7 @@
     "height": 10,
     "attackDamage": 38,
     "range": 350,
-    "speed": 600,
+    "speed": 700,
     "effectData": {
       "name": "群攻",
       "imgName": "tower/arrow/effect.png",

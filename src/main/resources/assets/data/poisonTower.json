@@ -21,7 +21,7 @@
     "imageName": "tower/poison/bullet.png",
     "width": 27,
     "height": 25,
-    "attackDamage": 38,
+    "attackDamage": 45,
     "range": 260,
     "speed": 560,
     "effectData": {

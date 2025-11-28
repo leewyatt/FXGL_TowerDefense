@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * @author LeeWyatt
- * 
+ *
  * 炮塔组件, 攻击进入射程范围的敌人
  */
 public class TowerComponent extends Component {
@@ -34,6 +34,12 @@ public class TowerComponent extends Component {
     private Duration attackRate;
     private Point2D towerPosition;
     private BulletData bulletData;
+
+    /**
+     * 攻击批次 ID，用于标识箭塔的每次群攻
+     * 同一批次的箭只有第一支命中的会造成伤害
+     */
+    private int attackBatchId = 0;
 
     @Override
     public void onAdded() {
@@ -96,7 +102,7 @@ public class TowerComponent extends Component {
                                 && e.getPosition().distance(towerPosition) < bulletData.range()
                 )
                 .ifPresent(enemy -> {
-                    shootBullet(enemy);
+                    shootBullet(enemy, -1);  // 非箭塔，batchId = -1 表示不使用批次逻辑
                     shootTimer.capture();
                 });
     }
@@ -105,8 +111,12 @@ public class TowerComponent extends Component {
         List<Entity> es = FXGL.getGameWorld().getEntitiesByType(EntityType.ENEMY);
         int bulletNum = 0;
         boolean flag = false;
+
+        // 每次群攻生成新的批次 ID
+        attackBatchId++;
+
         for (Entity enemy : es) {
-            if (bulletNum > ConfigData.MAX_BULLET_AMOUNT) {
+            if (bulletNum >= ConfigData.MAX_BULLET_AMOUNT) {
                 break;
             }
             Point2D ep = enemy.getPosition();
@@ -114,7 +124,7 @@ public class TowerComponent extends Component {
             if (ep.distance(towerPosition) <= bulletData.range()) {
                 flag = true;
                 bulletNum++;
-                shootBullet(enemy);
+                shootBullet(enemy, attackBatchId);  // 传入批次 ID
             }
         }
         if (flag) {
@@ -122,12 +132,13 @@ public class TowerComponent extends Component {
         }
     }
 
-    private void shootBullet(Entity enemy) {
+    private void shootBullet(Entity enemy, int batchId) {
         Point2D dir = enemy.getPosition().subtract(towerPosition);
         FXGL.spawn("bullet", new SpawnData(
                 entity.getCenter().subtract(bulletData.width() / 2.0, bulletData.height() / 2.0))
                 .put("bulletData", bulletData)
                 .put("dir", dir)
+                .put("batchId", batchId)  // 添加批次 ID
         );
     }
 

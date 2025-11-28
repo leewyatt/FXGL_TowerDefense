@@ -21,7 +21,7 @@
     "imageName": "tower/thunder/bullet.png",
     "width": 30,
     "height": 9,
-    "attackDamage": 50,
+    "attackDamage": 55,
     "range": 270,
     "speed": 600,
     "effectData": {

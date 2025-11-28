@@ -21,7 +21,7 @@
     "imageName": "tower/flame/bullet.png",
     "width": 32,
     "height": 12,
-    "attackDamage": 22,
+    "attackDamage": 30,
     "range": 230,
     "speed": 560,
     "effectData": {

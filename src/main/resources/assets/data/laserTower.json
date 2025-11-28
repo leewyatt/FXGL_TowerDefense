@@ -21,7 +21,7 @@
     "imageName": "tower/laser/bullet.png",
     "width": 38,
     "height": 13,
-    "attackDamage": 35,
+    "attackDamage": 39,
     "range": 150,
     "speed": 680,
     "effectData": {
